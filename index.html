@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Carrega a biblioteca ResponsiveVoice antes do script app.js -->
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=YOUR_API_KEY"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__conteudo">
+            <div class="container__informacoes">
+                <div class="container__texto">
+                    <h1></h1> <!-- Cabeçalho para o título -->
+                    <p class="texto__paragrafo"></p> <!-- Parágrafo para a descrição -->
+                </div>
+                <input type="number" min="1" max="10" class="container__input"> <!-- Campo de entrada para o chute do usuário -->
+                <div class="chute container__botoes">
+                    <button onclick="verificarChute()" class="container__botao">Chutar</button> <!-- Botão para verificar o chute -->
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button> <!-- Botão para reiniciar o jogo -->
+                </div>
+            </div>
+            <img src="img/ia.png" alt="Uma pessoa olhando para a esquerda" class="container__imagem-pessoa" /> <!-- Imagem ilustrativa -->
+        </div>
+    </div>
+    <!-- Certifique-se de que o script responsivevoice.js é carregado primeiro -->
+    <script defer src="app.js"></script> <!-- Script JavaScript deferido -->
+</body>
+</html>
