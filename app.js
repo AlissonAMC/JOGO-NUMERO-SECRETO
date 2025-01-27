@@ -11,7 +11,7 @@ function ExibirTextoNaTela(tag, texto) {
     if ('speechSynthesis' in window) {
         let utterance = new SpeechSynthesisUtterance(texto);
         utterance.lang = 'pt-BR'; 
-        utterance.rate = 2.0; 
+        utterance.rate = 2.1; 
         window.speechSynthesis.speak(utterance); 
     } else {
         console.log("Web Speech API não suportada neste navegador.");
@@ -21,7 +21,7 @@ function ExibirTextoNaTela(tag, texto) {
 // Função para exibir o texto inicial do jogo
 function exibirTextoInicial() {
     ExibirTextoNaTela("h1", "JOGO DO NUMERO SECRETO"); // Exibe o título
-    ExibirTextoNaTela("p", "Tente adivinhar o número secreto entre 1 e 10"); // Exibe a descrição
+    ExibirTextoNaTela("p", "Tente adivinhar o número secreto entre 1 e 50"); // Exibe a descrição
 }
 
 // Chama a função para exibir o texto inicial
@@ -62,9 +62,9 @@ function reiniciarJogo() {
 
 // Função para gerar um número aleatório entre 1 e 10
 function NumeroAleatorio() {
-    let GerarNumeroAleatorio = parseInt(Math.random() * 10 + 1); // Gera um número inteiro aleatório
+    let GerarNumeroAleatorio = parseInt(Math.random() * 50 + 1); // Gera um número inteiro aleatório
     while (listaNumerosAleatorios.includes(GerarNumeroAleatorio)) { // Verifica se o número já foi gerado
-        GerarNumeroAleatorio = parseInt(Math.random() * 10 + 1); // Gera outro número se já estiver na lista
+        GerarNumeroAleatorio = parseInt(Math.random() * 50 + 1); // Gera outro número se já estiver na lista
     }
     listaNumerosAleatorios.push(GerarNumeroAleatorio); // Adiciona o número à lista de números aleatórios
     console.log(listaNumerosAleatorios); // Exibe a lista de números gerados no console
