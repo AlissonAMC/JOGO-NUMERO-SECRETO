@@ -20,7 +20,7 @@ function ExibirTextoNaTela(tag, texto) {
 
 // Função para exibir o texto inicial do jogo
 function exibirTextoInicial() {
-    ExibirTextoNaTela("h1", ""); // Exibe o título
+    ExibirTextoNaTela("h1", "Jogo do numero secreto"); // Exibe o título
     ExibirTextoNaTela("p", "Tente adivinhar o número secreto entre 1 e 50"); // Exibe a descrição
 }
 
